@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+
+
+<head>
+    <title> 첫번째 웹앱입니다. </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename ='style.css')}}">
+</head>
+
+<body>
+ {% from "_formhelpers.html" import render_field %}
+
+    <div> 이름을 입력해주세요  </div>
+    <form method=post action ="/hello">
+        <dl>
+            {{ render_field(form.sayhello) }}
+        </dl>
+
+        <input type=submit value='이름입력' name= 'submit_btn'>
+    </form>   
+
+    </body>
+
+</html>
